@@ -41,6 +41,8 @@ sudo make udp-serverIOT.upload PORT=/dev/ttyUSB1
 
 sudo make PORT=/dev/ttyUSB1 login
 
+
+
 Importante!!: 
 se for necessário fazer um clone do repositório novamente, é necessário alterar os seguintes ficheiros: “contiki-ng/os/contiki-default-conf.h” e “IOTServer/iotserver.js”. No ficheiro contiki-default-conf.h é necessário alterar a variável:
 
