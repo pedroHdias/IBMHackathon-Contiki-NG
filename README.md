@@ -5,23 +5,23 @@ Contiki-NG para o IBM Hackathon
 
 É utilizado o RaspBerry Pi3 para efetuar a ligação entre a rede WSN e a plataforma IBM Watson IoT. Foi implementado um servidor NodeJS que usa as bibliotecas `dgram` e `udp6` para a comunicação com o Mote, e usa a biblioteca `ibmiotf` para a comunicação com a aplicação na plataforma IBM Watson IoT. Para a rede WSN foram utilizados Zolertias revision-b com o sistema operativo Contiki-NG.
 
-A rede é composta então por 4 componentes distintas:
+- A rede é composta então por 4 componentes distintas:
 
-- IBM Cloud App:
+### IBM Cloud App:
 
--- Aplicação alojada na plataforma IBM Watson IoT;
+Aplicação alojada na plataforma IBM Watson IoT;
 
-- Servidor NodeJS:
+### Servidor NodeJS:
 
--- Aplicação que serve dois propósitos. Por um lado contem um servidor UDP que aguarda mensagens periódicas (1-1min) com valores dos sensores (temperatura, humidade e luz) e envia mensagem ao Mote para alterar o estado do atuador (LED). Por outro lado contem um servidor HTTPS que comunica com a aplicação alojada na plataforma IBM Watson IoT, enviando os dados dos sensores e aguardando mensagem para alterar o estado do atuador (LED) do Mote;
+Aplicação que serve dois propósitos. Por um lado contem um servidor UDP que aguarda mensagens periódicas (1-1min) com valores dos sensores (temperatura, humidade e luz) e envia mensagem ao Mote para alterar o estado do atuador (LED). Por outro lado contem um servidor HTTPS que comunica com a aplicação alojada na plataforma IBM Watson IoT, enviando os dados dos sensores e aguardando mensagem para alterar o estado do atuador (LED) do Mote;
 
-- Border Router:
+### Border Router:
 
--- Este dispositivo faz a ligação entre a rede WSN e o meio exterior, encaminhando os pacotes para o Mote e para a interface tun0;
+Este dispositivo faz a ligação entre a rede WSN e o meio exterior, encaminhando os pacotes para o Mote e para a interface tun0;
 
-- Mote:
+### Mote:
 
--- Dispositivo que contem os sensores de temperatura, humidade e luz e envia periodicamente os valores para o servidor NodeJs. Escuta também mensagens provenientes do servidor NodeJs para alterar o estado do seu atuador LED. 
+Dispositivo que contem os sensores de temperatura, humidade e luz e envia periodicamente os valores para o servidor NodeJs. Escuta também mensagens provenientes do servidor NodeJs para alterar o estado do seu atuador LED. 
 
 ## Usage
 
