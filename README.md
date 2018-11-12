@@ -42,7 +42,7 @@ Para alteração e upload do ficheiro `udp-serverIOT.c` para o Zolertia é neces
 `sudo make PORT=/dev/ttyUSB1 login`
 
 ## Importante!!
-Se for necessário uma cópia do repositória limpa, encontra-se em https://github.com/pedroHdias/IBMHackathon-Contiki-NG e é feito através do seguinte comando na diretoria pretendida:
+Se for necessário uma cópia do repositório, encontra-se em https://github.com/pedroHdias/IBMHackathon-Contiki-NG e é feito através do seguinte comando na diretoria pretendida:
 
 `sudo git clone https://github.com/pedroHdias/IBMHackathon-Contiki-NG`
 
