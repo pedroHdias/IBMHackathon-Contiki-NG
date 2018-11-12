@@ -1,6 +1,7 @@
 # IBMHackathon-Contiki-NG
 Contiki-NG para o IBM Hackathon
 
+
 É utilizado o RaspBerry Pi3 para efetuar a ligação entre a rede WSN e a plataforma IBM Watson IoT. Foi implementado um servidor NodeJS que usa as bibliotecas “dgram” e “udp6” para a comunicação com o Mote, e usa a biblioteca “ibmiotf” para a comunicação com a aplicação na plataforma IBM Watson IoT. Para a rede WSN foram utilizados Zolertias revision-b com o sistema operativo Contiki-NG.
 
 A rede é composta então por 4 componentes distintas:
@@ -20,6 +21,9 @@ o	Este dispositivo faz a ligação entre a rede WSN e o meio exterior, encaminha
 •	Mote:
 
 o	Dispositivo que contem os sensores de temperatura, humidade e luz e envia periodicamente os valores para o servidor NodeJs. Escuta também mensagens provenientes do servidor NodeJs para alterar o estado do seu atuador LED. 
+
+
+
 
 O RaspBerry Pi3 corre um script que mantem uma interface virtual tun0 automaticamente ligada. Esta interface virtual é criada através da execução do comando “make connect-router” utilizado o protocolo SLIP (serial line internet protocol), permitindo o encapsulamento e transmissão do tráfego IP para e vindo da linha de série. Para mais detalhes consultar: https://github.com/contiki-ng/contiki-ng/wiki/Tutorial:-RPL-border-router. (De notar que o Border Router tem de obrigatoriamente de estar ligado na porta ttyUSB0 e o Mote na porta ttyUSB1. Se isto não se verificar a solução não funciona – para verificar executar o comando “sudo dmesg | grep tty”)
 
