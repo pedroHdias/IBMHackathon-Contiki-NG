@@ -1,6 +1,7 @@
 # IBMHackathon-Contiki-NG
 Contiki-NG para o IBM Hackathon
 
+![alt text](https://github.com/pedroHdias/IBMHackathon-Contiki-NG/blob/master/icon.png)
 
 É utilizado o RaspBerry Pi3 para efetuar a ligação entre a rede WSN e a plataforma IBM Watson IoT. Foi implementado um servidor NodeJS que usa as bibliotecas `dgram` e `udp6` para a comunicação com o Mote, e usa a biblioteca `ibmiotf` para a comunicação com a aplicação na plataforma IBM Watson IoT. Para a rede WSN foram utilizados Zolertias revision-b com o sistema operativo Contiki-NG.
 
