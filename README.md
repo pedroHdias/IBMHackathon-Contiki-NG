@@ -40,3 +40,33 @@ sudo make udp-serverIOT.upload PORT=/dev/ttyUSB1
 //se pretender ver logs do Mote na consola, efetuar o seguinte comando
 
 sudo make PORT=/dev/ttyUSB1 login
+
+Importante!!: 
+se for necessário fazer um clone do repositório novamente, é necessário alterar os seguintes ficheiros: “contiki-ng/os/contiki-default-conf.h” e “IOTServer/iotserver.js”. No ficheiro contiki-default-conf.h é necessário alterar a variável:
+
+#ifndef IEEE802154_CONF_PANID
+
+#define IEEE802154_CONF_PANID [DEFINIR PANID DO GRUPO]
+
+#endif /* IEEE802154_CONF_PANID */
+
+No ficheiro iotserver.js é necessário alterar as variáveis que diferem de grupo para grupo: 
+
+var mote = ' ';
+
+var config = {
+
+    "org" : " ",
+    
+    "id" : " ",
+    
+    "domain": "internetofthings.ibmcloud.com",
+    
+    "type" : " ",
+    
+    "auth-method" : "token",
+    
+    "auth-token" : " "
+    
+};
+
