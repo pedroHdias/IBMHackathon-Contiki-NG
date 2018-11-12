@@ -2,7 +2,7 @@
 Contiki-NG para o IBM Hackathon
 
 
-É utilizado o RaspBerry Pi3 para efetuar a ligação entre a rede WSN e a plataforma IBM Watson IoT. Foi implementado um servidor NodeJS que usa as bibliotecas “dgram” e “udp6” para a comunicação com o Mote, e usa a biblioteca “ibmiotf” para a comunicação com a aplicação na plataforma IBM Watson IoT. Para a rede WSN foram utilizados Zolertias revision-b com o sistema operativo Contiki-NG.
+É utilizado o RaspBerry Pi3 para efetuar a ligação entre a rede WSN e a plataforma IBM Watson IoT. Foi implementado um servidor NodeJS que usa as bibliotecas `dgram` e `udp6` para a comunicação com o Mote, e usa a biblioteca `ibmiotf` para a comunicação com a aplicação na plataforma IBM Watson IoT. Para a rede WSN foram utilizados Zolertias revision-b com o sistema operativo Contiki-NG.
 
 A rede é composta então por 4 componentes distintas:
 
@@ -24,7 +24,7 @@ A rede é composta então por 4 componentes distintas:
 
 ## Usage
 
-O RaspBerry Pi3 corre um script que mantem uma interface virtual tun0 automaticamente ligada. Esta interface virtual é criada através da execução do comando “make connect-router” utilizado o protocolo SLIP (serial line internet protocol), permitindo o encapsulamento e transmissão do tráfego IP para e vindo da linha de série. Para mais detalhes consultar: https://github.com/contiki-ng/contiki-ng/wiki/Tutorial:-RPL-border-router. (De notar que o Border Router tem de obrigatoriamente de estar ligado na porta ttyUSB0 e o Mote na porta ttyUSB1. Se isto não se verificar a solução não funciona – para verificar executar o comando `sudo dmesg | grep tty`)
+O RaspBerry Pi3 corre um script que mantem uma interface virtual tun0 automaticamente ligada. Esta interface virtual é criada através da execução do comando `sudo make connect-router` utilizado o protocolo SLIP (serial line internet protocol), permitindo o encapsulamento e transmissão do tráfego IP para e vindo da linha de série. Para mais detalhes consultar: https://github.com/contiki-ng/contiki-ng/wiki/Tutorial:-RPL-border-router. (De notar que o Border Router tem de obrigatoriamente de estar ligado na porta ttyUSB0 e o Mote na porta ttyUSB1. Se isto não se verificar a solução não funciona – para verificar executar o comando `sudo dmesg | grep tty`)
 
 A rede WSN é construída através do uso dos protocolos RPL (Routing over Low Power and Lossy Networks) e ND (Neighbour Discovery), que são implementados sob a pilha protocolar 6LowPan do Contiki-NG. Estes protocolos são utilizados para a descoberta de nós, construção da rede e manutenção da rede. Para mais detalhes consultar: https://github.com/contiki-ng/contiki-ng/wiki/Documentation:-RPL.
 
@@ -40,11 +40,13 @@ Para alteração e upload do ficheiro `udp-serverIOT.c` para o Zolertia é neces
 
 `sudo make PORT=/dev/ttyUSB1 login`
 
-
-
-
 ## Importante!!
-Se for necessário fazer um clone do repositório novamente, é necessário alterar os seguintes ficheiros: “contiki-ng/os/contiki-default-conf.h” e “IOTServer/iotserver.js”. No ficheiro contiki-default-conf.h é necessário alterar a variável:
+Se for necessário uma cópia do repositória limpa, encontra-se em https://github.com/pedroHdias/IBMHackathon-Contiki-NG e é feito através do seguinte comando na diretoria pretendida:
+
+`sudo git clone https://github.com/pedroHdias/IBMHackathon-Contiki-NG`
+
+
+É necessário alterar os seguintes ficheiros: `contiki-ng/os/contiki-default-conf.h` e `IOTServer/iotserver.js`. No ficheiro `contiki-default-conf.h` é necessário alterar a variável:
 
 `#ifndef IEEE802154_CONF_PANID`
 
@@ -52,7 +54,7 @@ Se for necessário fazer um clone do repositório novamente, é necessário alte
 
 `#endif /* IEEE802154_CONF_PANID */`
 
-No ficheiro iotserver.js é necessário alterar as variáveis que diferem de grupo para grupo: 
+No ficheiro `iotserver.js` é necessário alterar as variáveis que diferem de grupo para grupo: 
 
 `var mote = ' ';`
 
