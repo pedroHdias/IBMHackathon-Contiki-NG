@@ -41,6 +41,22 @@ Para alteração e upload do ficheiro `udp-serverIOT.c` para o Zolertia é neces
 
 `sudo make PORT=/dev/ttyUSB1 login`
 
+Para iniciar o servidor, é necessário estar na directoria do ficheiro, ou seja, em `/IOTServer/`, e efetuar o seguinte comando:
+
+`sudo node iotserver.js`
+
+- Nota: Se por algum motivo ocorrer um problema com os módulos de NodeJs, efetuar os seguintes comandos na diretoria onde se encontra o ficheiro `iotserver.js`:
+
+`sudo npm i dgram`
+
+`sudo npm i udp6`
+
+`sudo npm i ibmiotf`
+
+Se pretender alterar o ficheiro e aplicar as alterações, é necessário parar o serviço do servidor (`Ctrl+C`) no terminal e tem de efetuar o seguinte comando na diretoria do ficheiro `iotserver.js`:
+
+`sudo node iotserver.js`
+
 ## Importante!!
 Se for necessário uma cópia do repositório, encontra-se em https://github.com/pedroHdias/IBMHackathon-Contiki-NG e é feito através do seguinte comando na diretoria pretendida:
 
