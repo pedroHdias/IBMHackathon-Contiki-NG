@@ -47,6 +47,10 @@ O comando acima inicializa a interface virtual tun0 e permite a comunicação co
 
 `sudo npm i ibmiotf`
 
+Depois destes dois passos a rede terá o seguinte aspeto:
+
+![alt text](https://github.com/pedroHdias/IBMHackathon-Contiki-NG/blob/master/rede.jpg)
+
 ### Se pretender alterar o ficheiro e aplicar as alterações, é necessário parar o serviço do servidor (`Ctrl+C`) no terminal e  efetuar o seguinte comando na diretoria do ficheiro `iotserver.js` para inicializar novamente o servidor Nodejs:
 
 `sudo node iotserver.js`
