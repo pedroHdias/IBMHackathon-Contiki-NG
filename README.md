@@ -106,3 +106,6 @@ No ficheiro `iotserver.js` é necessário alterar as variáveis que diferem de g
     
 `};`
 
+# Ambiente Node RED
+
+https://node-red-ipt-session.eu-gb.mybluemix.net
