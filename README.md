@@ -59,16 +59,24 @@ Depois destes dois passos a rede terá o seguinte aspeto:
 
 - Fazer upload do código para o Zolertia (MOTE)
 
-`sudo make udp-serverIOT.upload PORT=/dev/ttyUSB1`  
+`make udp-serverIOT.upload PORT=/dev/ttyUSB1`  
 
 - Se pretender ver logs do Mote na consola, efetuar o seguinte comando
 
-`sudo make PORT=/dev/ttyUSB1 login`
+`make PORT=/dev/ttyUSB1 login`
 
 ## Importante!!
 Se for necessário uma cópia do repositório, encontra-se em https://github.com/pedroHdias/IBMHackathon-Contiki-NG e é feito através do seguinte comando na diretoria pretendida:
 
-`sudo git clone https://github.com/pedroHdias/IBMHackathon-Contiki-NG`
+`git clone https://github.com/pedroHdias/IBMHackathon-Contiki-NG`
+
+De seguida é necessário entrar na directoria /IBMHachathon-Contiki-NG e efetuar o seguinte comando:
+
+`git clone https://github/contiki-ng/contiki-ng`
+
+Depois na directoria /contiki-ng:
+
+`git submodule update –init`
 
 É necessário alterar os seguintes ficheiros: `contiki-ng/os/contiki-default-conf.h` e `IOTServer/iotserver.js`. No ficheiro `contiki-default-conf.h` é necessário alterar a variável:
 
