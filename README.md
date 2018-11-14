@@ -31,7 +31,7 @@ A rede WSN é construída através do uso dos protocolos RPL (Routing over Low P
 
 Tanto o Border Router como o Mote utilizam o sistema operativo Contiki-NG https://github.com/contiki-ng/contiki-ng. Para o Border Router é utilizado o exemplo `border-router.c`, localizado em `contiki-ng/exemples/rpl-border-router`. Para o Mote é utilizada uma versão adaptada do exemplo `udp-server.c (udp-serverIOT.c)` localizada em `contiki-ng/exemples/rpl-udp`. Para mais detalhes e exemplos, consultar: http://www.iet.unipi.it/c.vallati/files/IoTinfivedays-v1.1.pdf.
 
-### Para iniciar a rede de sensores é necessário abrir a pasta IBMHackathon-Contiki-NG no Ambiente de Trabalho do Raspberry Pi 3 e efetuar os seguintes comandos:
+## PASSO 1: Para iniciar a rede de sensores é necessário abrir a pasta IBMHackathon-Contiki-NG no Ambiente de Trabalho do Raspberry Pi 3 e efetuar os seguintes comandos:
 
 `cd contiki-ng/exemples/rpl-border-router`
 
@@ -39,7 +39,7 @@ Tanto o Border Router como o Mote utilizam o sistema operativo Contiki-NG https:
 
 O comando acima inicializa a interface virtual tun0 e permite a comunicação com a rede WSN – Wireless Sensor Network. De relembrar que este comando só funciona se o Border Router estiver na porta ttyUSB0.
 
-### Para iniciar o servidor, é necessário estar na directoria do ficheiro, ou seja, em `/IOTServer/`, e efetuar o seguinte comando:
+## PASSO 2: Para iniciar o servidor, é necessário estar na directoria do ficheiro, ou seja, em `/IOTServer/`, e efetuar o seguinte comando:
 
 `sudo node iotserver.js`
 
