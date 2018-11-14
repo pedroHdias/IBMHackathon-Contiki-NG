@@ -39,7 +39,7 @@ Tanto o Border Router como o Mote utilizam o sistema operativo Contiki-NG https:
 
 O comando acima inicializa a interface virtual tun0 e permite a comunicação com a rede WSN – Wireless Sensor Network. De relembrar que este comando só funciona se o Border Router estiver na porta ttyUSB0.
 
-## PASSO 2: Para iniciar o servidor, é necessário estar na directoria do ficheiro, ou seja, em `/IOTServer/`, e efetuar o seguinte comando:
+## PASSO 2: Para iniciar o servidor, é necessário estar na directoria do ficheiro, ou seja, em `/IOTServer/`, alterar as configurações para a comunicação com a platarforma IBM Watson IoT (variável `config`) e efetuar o seguinte comando:
 
 `sudo node iotserver.js`
 
