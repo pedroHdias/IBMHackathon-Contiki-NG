@@ -31,7 +31,27 @@ A rede WSN é construída através do uso dos protocolos RPL (Routing over Low P
 
 Tanto o Border Router como o Mote utilizam o sistema operativo Contiki-NG https://github.com/contiki-ng/contiki-ng. Para o Border Router é utilizado o exemplo `border-router.c`, localizado em `contiki-ng/exemples/rpl-border-router`. Para o Mote é utilizada uma versão adaptada do exemplo `udp-server.c (udp-serverIOT.c)` localizada em `contiki-ng/exemples/rpl-udp`. Para mais detalhes e exemplos, consultar: http://www.iet.unipi.it/c.vallati/files/IoTinfivedays-v1.1.pdf.
 
-Para alteração e upload do ficheiro `udp-serverIOT.c` para o Zolertia é necessário abrir um terminal na diretoria do ficheiro, ou seja, em `contiki-ng/exemples/rpl-udp`, e efetuar os seguintes comandos:
+### Para iniciar a rede de sensores é necessário abrir a pasta IBMHackathon-Contiki-NG no Ambiente de Trabalho do Raspberry Pi 3 e efetuar os seguintes comandos:
+
+`cd contiki-ng/exemples/rpl-border-router`
+
+`make connect-router`
+
+O comando acima inicializa a interface virtual tun0 e permite a comunicação com a rede WSN – Wireless Sensor Network. De relembrar que este comando só funciona se o Border Router estiver na porta ttyUSB0.
+
+### Para iniciar o servidor, é necessário estar na directoria do ficheiro, ou seja, em `/IOTServer/`, e efetuar o seguinte comando:
+
+`sudo node iotserver.js`
+
+- Nota: Se por algum motivo ocorrer um problema com os módulos de NodeJs, efetuar o seguinte comando na diretoria onde se encontra o ficheiro `iotserver.js`:
+
+`sudo npm i ibmiotf`
+
+### Se pretender alterar o ficheiro e aplicar as alterações, é necessário parar o serviço do servidor (`Ctrl+C`) no terminal e  efetuar o seguinte comando na diretoria do ficheiro `iotserver.js` para inicializar novamente o servidor Nodejs:
+
+`sudo node iotserver.js`
+
+### Para alteração e upload do ficheiro `udp-serverIOT.c` para o Zolertia é necessário abrir um terminal na diretoria do ficheiro, ou seja, em `contiki-ng/exemples/rpl-udp`, e efetuar os seguintes comandos:
 
 - Fazer upload do código para o Zolertia (MOTE)
 
@@ -41,27 +61,10 @@ Para alteração e upload do ficheiro `udp-serverIOT.c` para o Zolertia é neces
 
 `sudo make PORT=/dev/ttyUSB1 login`
 
-Para iniciar o servidor, é necessário estar na directoria do ficheiro, ou seja, em `/IOTServer/`, e efetuar o seguinte comando:
-
-`sudo node iotserver.js`
-
-- Nota: Se por algum motivo ocorrer um problema com os módulos de NodeJs, efetuar os seguintes comandos na diretoria onde se encontra o ficheiro `iotserver.js`:
-
-`sudo npm i dgram`
-
-`sudo npm i udp6`
-
-`sudo npm i ibmiotf`
-
-Se pretender alterar o ficheiro e aplicar as alterações, é necessário parar o serviço do servidor (`Ctrl+C`) no terminal e tem de efetuar o seguinte comando na diretoria do ficheiro `iotserver.js`:
-
-`sudo node iotserver.js`
-
 ## Importante!!
 Se for necessário uma cópia do repositório, encontra-se em https://github.com/pedroHdias/IBMHackathon-Contiki-NG e é feito através do seguinte comando na diretoria pretendida:
 
 `sudo git clone https://github.com/pedroHdias/IBMHackathon-Contiki-NG`
-
 
 É necessário alterar os seguintes ficheiros: `contiki-ng/os/contiki-default-conf.h` e `IOTServer/iotserver.js`. No ficheiro `contiki-default-conf.h` é necessário alterar a variável:
 
