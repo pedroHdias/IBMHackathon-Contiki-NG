@@ -7,7 +7,7 @@ Contiki-NG para o IBM Hackathon
 
 Esquemático da rede:
 
-![alt text](https://github.com/pedroHdias/IBMHackathon-Contiki-NG/blob/master/imgs/esquematico_rede.png)
+![alt text](https://github.com/pedroHdias/IBMHackathon-Contiki-NG/blob/master/imgs/esquema_rede.png)
 
 A rede é composta então por 4 componentes distintas:
 
