@@ -1,9 +1,13 @@
 # IBMHackathon-Contiki-NG
 Contiki-NG para o IBM Hackathon
 
-![alt text](https://github.com/pedroHdias/IBMHackathon-Contiki-NG/blob/master/icon.png)
+![alt text](https://github.com/pedroHdias/IBMHackathon-Contiki-NG/blob/master/imgs/icon.png)
 
 É utilizado o RaspBerry Pi3 para efetuar a ligação entre a rede WSN e a plataforma IBM Watson IoT. Foi implementado um servidor NodeJS que usa as bibliotecas `dgram` e `udp6` para a comunicação com o Mote, e usa a biblioteca `ibmiotf` para a comunicação com a aplicação na plataforma IBM Watson IoT. Para a rede WSN foram utilizados Zolertias revision-b com o sistema operativo Contiki-NG.
+
+Esquemático da rede:
+
+![alt text](https://github.com/pedroHdias/IBMHackathon-Contiki-NG/blob/master/imgs/esquematico_rede.png)
 
 A rede é composta então por 4 componentes distintas:
 
@@ -43,13 +47,19 @@ O comando acima inicializa a interface virtual tun0 e permite a comunicação co
 
 `sudo node iotserver.js`
 
+Para a comunicação com a plataforma IBM Watson IoT, os campos “org, id, type, auth-token” diferem para cada grupo.
+
+Exemplo de config:
+
+![alt text](https://github.com/pedroHdias/IBMHackathon-Contiki-NG/blob/master/imgs/exemplo_config.png)
+
 - Nota: Se por algum motivo ocorrer um problema com os módulos de NodeJs, efetuar o seguinte comando na diretoria onde se encontra o ficheiro `iotserver.js`:
 
 `sudo npm i ibmiotf`
 
 Depois destes dois passos a rede terá o seguinte aspeto:
 
-![alt text](https://github.com/pedroHdias/IBMHackathon-Contiki-NG/blob/master/rede.jpg)
+![alt text](https://github.com/pedroHdias/IBMHackathon-Contiki-NG/blob/master/imgs/rede.jpg)
 
 ### Se pretender alterar o ficheiro e aplicar as alterações, é necessário parar o serviço do servidor (`Ctrl+C`) no terminal e  efetuar o seguinte comando na diretoria do ficheiro `iotserver.js` para inicializar novamente o servidor Nodejs:
 
