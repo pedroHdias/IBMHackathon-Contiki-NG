@@ -82,7 +82,7 @@ Se for necessário uma cópia do repositório, encontra-se em https://github.com
 
 De seguida é necessário entrar na directoria /IBMHachathon-Contiki-NG e efetuar o seguinte comando:
 
-`git clone https://github/contiki-ng/contiki-ng`
+`git clone https://github.com/contiki-ng/contiki-ng`
 
 Depois na directoria /contiki-ng:
 
