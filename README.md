@@ -88,6 +88,14 @@ Depois na directoria /contiki-ng:
 
 `git submodule update –init`
 
+Se necessário, instalar o compilador gcc:
+
+`sudo apt-get install gcc-arm-none-eabi`
+
+Os ficheiros `dht22.h` e `dht22.c` na directoria `/IBMHackathon-Contiki-NG` precisam de ser copiados e substituir os mesmos ficheiros em `/contiki-ng/arch/platform/zoul/dev/`
+
+O ficheiro `udp-serverIOT.c` e `Makefile` precisam de ser copiados para `/contiki-ng/examples/rpl-udp/`
+
 É necessário alterar os seguintes ficheiros: `contiki-ng/os/contiki-default-conf.h` e `IOTServer/iotserver.js`. No ficheiro `contiki-default-conf.h` é necessário alterar a variável:
 
 `#ifndef IEEE802154_CONF_PANID`
