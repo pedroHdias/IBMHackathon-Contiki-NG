@@ -45,7 +45,7 @@
 #define UDP_CLIENT_PORT	8000
 #define UDP_SERVER_PORT	10000
 //intervalo de leitura
-#define READ_INTERVAL (60 * CLOCK_SECOND)
+#define READ_INTERVAL (10 * CLOCK_SECOND)
 //estrutura para o timer
 static struct etimer et;
 //estrutura para a conexão udp
