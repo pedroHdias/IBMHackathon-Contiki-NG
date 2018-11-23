@@ -86,7 +86,7 @@ De seguida é necessário entrar na directoria /IBMHachathon-Contiki-NG e efetua
 
 Depois na directoria /contiki-ng:
 
-`git submodule update –-init`
+`git submodule update --init`
 
 Se necessário, instalar o compilador gcc:
 
