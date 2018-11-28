@@ -37,7 +37,7 @@ Tanto o Border Router como o Mote utilizam o sistema operativo Contiki-NG https:
 
 ## PASSO 1: Para iniciar a rede de sensores é necessário abrir a pasta IBMHackathon-Contiki-NG no Ambiente de Trabalho do Raspberry Pi 3 e efetuar os seguintes comandos:
 
-`cd contiki-ng/exemples/rpl-border-router`
+`cd contiki-ng/examples/rpl-border-router`
 
 `make connect-router`
 
